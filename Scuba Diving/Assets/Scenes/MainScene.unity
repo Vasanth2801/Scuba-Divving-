@@ -616,9 +616,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   speed: 5
+  fastSwim: 9
+  rushForce: 20
+  isRushing: 0
+  canRush: 1
+  rushDuration: 2.7
+  rushCoolDown: 2
   rb: {fileID: 1542456542}
   moveInputX: 0
   moveInputY: 0
+  isMoving: 0
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
