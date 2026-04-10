@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class BigFish : MonoBehaviour
+public class DartFish : MonoBehaviour
 {
-    [Header("Point Preferences")]
+    [Header("Point References")]
     [SerializeField] private Transform pointA;
     [SerializeField] private Transform pointB;
     Transform currentPoint;
@@ -10,8 +10,8 @@ public class BigFish : MonoBehaviour
 
     [Header("Movement Settings")]
     [SerializeField] private float speed = 0.07f;
-    [SerializeField] private float arrivalThreshold = 0.25f;
-    [SerializeField] private int facingDirection = 1;
+    [SerializeField] private float arrivalThresHold = 0.25f;
+    [SerializeField] private float facingDirection = 1;
 
     private void Start()
     {
@@ -29,9 +29,9 @@ public class BigFish : MonoBehaviour
         Vector3 targetPos = currentPoint.position;
         transform.position = Vector3.MoveTowards(this.transform.position, targetPos, speed);
 
-        if(Vector3.Distance(transform.position, targetPos) <= arrivalThreshold)
+        if (Vector3.Distance(transform.position, targetPos) <= arrivalThresHold)
         {
-            currentPoint = currentPoint == pointA? pointB : pointA;
+            currentPoint = currentPoint == pointA ? pointB : pointA;
             Flip();
         }
     }

@@ -11,6 +11,7 @@ public class Fish : MonoBehaviour
     [Header("Movement Settings")]
     [SerializeField] private float speed;
     [SerializeField] private float arrivalThreshold = 0.25f;
+    [SerializeField] private int facingDirection = 1;
 
     void Start()
     {
