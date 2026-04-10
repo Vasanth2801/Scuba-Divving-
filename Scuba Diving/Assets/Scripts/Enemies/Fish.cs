@@ -40,6 +40,7 @@ public class Fish : MonoBehaviour
         if(collision.gameObject.tag == "Player")
         {
             Debug.Log("Game Over");
+            UIManager.Instance.GameOver();
             Time.timeScale = 0f;
         }
     }

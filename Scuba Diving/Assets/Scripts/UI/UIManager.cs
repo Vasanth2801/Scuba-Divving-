@@ -7,6 +7,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject pauseMenuPanel;
     [SerializeField] private bool isGamePaused;
 
+    [Header("Game Over")]
+    [SerializeField] private GameObject gameOverPanel;
+
     public static UIManager Instance;
 
     private void Awake()
@@ -61,5 +64,11 @@ public class UIManager : MonoBehaviour
     {
         SceneManager.LoadScene(0);
         Time.timeScale = 1f;
+    }
+
+    public void GameOver()
+    {
+        gameOverPanel.SetActive(true);
+        Time.timeScale = 0f;
     }
 }
